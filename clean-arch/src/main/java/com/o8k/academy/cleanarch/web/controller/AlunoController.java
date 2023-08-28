@@ -2,7 +2,6 @@ package com.o8k.academy.cleanarch.web.controller;
 
 import com.o8k.academy.cleanarch.domain.contract.RegistraAlunoBorda;
 import com.o8k.academy.cleanarch.domain.entity.Aluno;
-import com.o8k.academy.cleanarch.web.converter.AlunoRequestConverter;
 import com.o8k.academy.cleanarch.web.request.AlunoRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +21,7 @@ public class AlunoController {
 
     @PostMapping
     public void save(@RequestBody AlunoRequest alunoRequest) {
-        Aluno aluno = Aluno.from(alunoRequest.name);
+        var aluno = Aluno.from(alunoRequest.name);
         registraAlunoBorda.save(aluno);
     }
 }

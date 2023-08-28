@@ -18,7 +18,7 @@ public class AlunoRepositoryImpl implements AlunoRepository {
 
     @Override
     public void save(Aluno aluno) {
-        AlunoEntity alunoEntity = AlunoEntity.from(aluno);
+        var alunoEntity = AlunoEntity.from(aluno);
         alunoDAO.save(alunoEntity);
     }
 }

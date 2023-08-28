@@ -11,6 +11,7 @@ public class RegistraAluno implements RegistraAlunoBorda {
     private AlunoRepository alunoRepository;
     @Autowired
     public RegistraAluno(AlunoRepository alunoRepository) {
+
         this.alunoRepository = alunoRepository;
     }
 

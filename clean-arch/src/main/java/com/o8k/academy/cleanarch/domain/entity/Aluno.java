@@ -7,7 +7,7 @@ public class Aluno {
     private UUID registrationNumber;
 
     public static Aluno from(String name) {
-        Aluno aluno = new Aluno();
+        var aluno = new Aluno();
         aluno.name = name;
         return aluno;
     }

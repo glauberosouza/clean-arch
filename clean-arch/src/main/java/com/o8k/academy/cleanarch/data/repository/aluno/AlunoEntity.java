@@ -11,9 +11,9 @@ public class AlunoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    UUID registrationNumber;
+    private UUID registrationNumber;
     public static AlunoEntity from(Aluno aluno){
-        AlunoEntity alunoEntity = new AlunoEntity();
+        var alunoEntity = new AlunoEntity();
         alunoEntity.name = aluno.getName();
         alunoEntity.registrationNumber = aluno.getRegistrationNumber();
         return alunoEntity;
